@@ -1,0 +1,13 @@
+今天的内容
+配置项目环境：
+路由 路由懒加载 路由按需加载
+axios 
+封装：
+项目目录 
+src 
+axios =>http.js
+components 组件 负责具体功能 头部组件 侧边栏组件 弹窗组件
+views  视图     负责的视图界面  eg:登录 注册 首页 用户管理  角色站
+store
+
+vue element-ui ()
