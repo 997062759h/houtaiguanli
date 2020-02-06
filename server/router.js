@@ -1,7 +1,6 @@
 const express = require("express")
 const Usermodel = require("./model/usermodel")
 const router = express.Router()
-
 //password 需要加密  md5
 router.post("/login", (req, res) => {
     //get 用query  POST用body
@@ -14,7 +13,7 @@ router.post("/login", (req, res) => {
         //如果登录成功
         console.log(data)
         if (data) {
-            res.cookie("userid", user._id, { maxAge: 1000 * 60 * 60 * 24 })
+            res.cookie("userid", data._id, { maxAge: 1000 * 60 * 60 * 24 })
             //角色管理
             res.send({
                 data:"登录成功",
@@ -28,7 +27,7 @@ router.post("/login", (req, res) => {
         }
     })
 })
-
+module.exports = router
 /**
  * 完善登录接口
  * 看mongoose文档
@@ -37,4 +36,3 @@ router.post("/login", (req, res) => {
  *
  *
  */
-module.exports = router

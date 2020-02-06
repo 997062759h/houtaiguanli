@@ -19,15 +19,19 @@ export default {
     };
   },
    methods: {
-     land(){
-      login({username:this.username,password:this.password}).then(res=>{
-        console.log(res)
-      })
-  
-
-
+    //  第一种方法
+    //  land(){
+    //   login({username:this.username,password:this.password}).then(res=>{
+    //     console.log(res)
+    //   })
+    //  }
+    // 第二种
+    async land(){
+      let data =await login({username:this.username,password:this.password})
+      if(data.code == 0){
+        this.$router.push("/home")
+      }
      }
-     
    }
 };
 </script>

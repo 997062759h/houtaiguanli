@@ -3,6 +3,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
 export default new Router({
+  mode:"history",
   routes: [
     {
       path: "/",
@@ -27,6 +28,11 @@ export default new Router({
       path: "/chart",
       name: "chart",
       component: () => import("../views/chart.vue")
+    },
+    {
+      path:"/home",
+      name:"",
+      component:()=>import("../views/home.vue")
     }
   ]
 })

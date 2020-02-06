@@ -12,7 +12,6 @@ app.use(cookieParser())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(router)
-console.log(mongoose)
 mongoose.connect("mongodb://127.0.0.1:27017/userhyn", { useNewUrlParser: true }).then(() => {
     console.log("数据库连接成功")
     app.listen(5000, () => {
